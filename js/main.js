@@ -66,13 +66,18 @@ window.onload = function () {
       }
     }, 3000 / fac)
     .add({
+      targets: ".fa-bars",
+      opacity: [0, 1],
+      duration: 500
+    })
+    .add({
       targets: ".base",
       cx: cx,
       cy: cy,
       r: [0, r],
       duration: 1000,
       complete: Draw
-    }, "+=500");
+    });
   //
 
 
@@ -107,7 +112,7 @@ function Draw() {
   var d = moveTo(cx, cy + r);
   for (var i = 0; i < list.length; i++) {
     var num = list[i];
-    var offset = pi / list.length * i
+    var offset = 0;
 
     if (num % 7 == 0) {
       var tr = cir(num, i);
@@ -125,8 +130,6 @@ function Draw() {
         });
       }
     }
-    if (num % 3 == 0)
-      offset += i;
     if (num % 5 == 0) {
       var conc = conCir(num, i, list.length);
       move.add({
@@ -146,6 +149,7 @@ function Draw() {
     //    if (num % 9 == 0)
     //    else
     //    var offset = pi / list.length * i
+    offset += i * 30;
     d += lineTo(cx + r * sin(offset),
       cy + r * cos(offset));
     //    console.log(list[i] / cx, list[i] / cy);
@@ -257,4 +261,46 @@ function cir(num, i) {
 
   //  return lineTo(cx + r * sin(offset),
   //    cy + r * cos(offset));
+}
+
+
+
+
+
+
+function expand() {
+  var menu = anime.timeline({
+    easing: 'cubicBezier(.51, .01, .51, .99)',
+  });
+  if ($(".fa-bars").hasClass("closed")) {
+    menu
+      .add({
+        targets: ".fa-bars",
+        left: "18vw",
+        rotate: 90,
+        duration: 500
+      })
+      .add({
+        targets: ".info",
+        width: 0.2 * w,
+        duration: 500
+      }, "-=500");
+    $(".fa-bars").removeClass("closed");
+  } else {
+    menu
+      .add({
+        targets: ".fa-bars",
+        left: "2vw",
+        rotate: 0,
+        duration: 500
+      })
+      .add({
+        targets: ".info",
+        width: 0,
+        duration: 500
+      }, "-=500");
+
+    $(".fa-bars").addClass("closed");
+
+  }
 }

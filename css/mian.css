@@ -7,6 +7,11 @@ body {
   background-color: black;
 }
 
+a {
+  text-decoration: none;
+  color: white;
+}
+
 #canvas {
   padding: 0.5%;
   margin: 0;
@@ -57,5 +62,50 @@ body {
   font-size: 3vw;
   color: white;
   background-color: black;
+}
 
+.info {
+  width: 0vw;
+  height: 100vh;
+  position: fixed;
+  color: white;
+  background-color: black;
+  text-align: center;
+  overflow-x: hidden;
+  white-space: nowrap;
+}
+
+.info h1 {
+  width: 100%;
+}
+
+.intro {
+  padding: 2vw 2vh;
+  font-size: 3vh;
+  white-space: normal;
+  flex-wrap: wrap-reverse;
+  max-height: 20vh;
+  text-align: left;
+  overflow-y: hidden;
+}
+
+.fa-bars {
+  position: fixed;
+  top: 3vh;
+  left: 2vw;
+  font-size: 2vw;
+  color: white;
+  cursor: pointer;
+}
+
+.public {
+  position: absolute;
+  width: 100%;
+  bottom: 2vh;
+  color: grey;
+}
+
+.public a {
+  color: grey;
+  text-decoration: underline;
 }
