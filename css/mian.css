@@ -79,6 +79,14 @@ a {
   width: 100%;
 }
 
+.info h2 {
+  color: coral;
+}
+
+.git {
+  color: cornflowerblue;
+}
+
 .intro {
   padding: 2vw 2vh;
   font-size: 3vh;
@@ -87,6 +95,7 @@ a {
   max-height: 20vh;
   text-align: left;
   overflow-y: hidden;
+  color: white;
 }
 
 .fa-bars {
