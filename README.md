@@ -1,10 +1,10 @@
 # Magic Circle
 ## A Maical Generator.
 It does not has the real magic (Possibly). 
-Inspired from the previous project:[Rune Generator](https://github.com/Dooomino/rune_generator)
+Inspired from the previous project: [Rune Generator](https://github.com/Dooomino/rune_generator)
 
 # Run
- - Open index.html
+ - Open index.html or visit the [Github Page](https://dooomino.github.io/MagicCircle/).
 
 # Examples
 ![message1](https://github.com/Dooomino/MagicCircle/blob/master/Examples/Magical.png)
