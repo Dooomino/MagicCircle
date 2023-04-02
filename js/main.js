@@ -16,7 +16,7 @@ var cx = w / 2;
 var cy = h * 0.8 / 2;
 
 
-var platte = [
+var palatte = [
   "#FA5732",
   "#4BA370",
   "#E38614",
