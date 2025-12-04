@@ -157,9 +157,9 @@ function Draw() {
 
   $(".lines").attr({
     d: d,
-    stroke: platte[list.length % platte.length]
+    stroke: palatte[list.length % palatte.length]
   });
-  console.log(platte[platte.length]);
+  console.log(palatte[palatte.length]);
   move
     .add({
       targets: ".lines",
@@ -204,7 +204,7 @@ function conCir(num, i, n) {
     cx: pos.x,
     cy: pos.y,
     r: tr,
-    stroke: platte[i % platte.length],
+    stroke: palatte[i % palatte.length],
     "stroke-width": (i % 5) + 2,
     fill: "transparent"
   });
@@ -226,7 +226,7 @@ function cir(num, i) {
       cx: cx,
       cy: cy,
       r: tr,
-      stroke: platte[i % platte.length],
+      stroke: palatte[i % palatte.length],
       "stroke-width": (i % 5) + 2,
       fill: "transparent"
     });
@@ -248,7 +248,7 @@ function cir(num, i) {
       //        lineTo((cx) + sin(ang), (cy + tr) - cos(ang)) +
       //        lineTo((cx - tr) + sin(ang), (cy) - cos(ang)) +
       //        lineTo((cx) + sin(ang), (cy - tr) + cos(ang)),
-      stroke: platte[i % platte.length],
+      stroke: palatte[i % palatte.length],
       "stroke-width": 4,
       transform: "rotate(" + (i * num) + " " + cx + " " + cy + ")",
       fill: "transparent"
